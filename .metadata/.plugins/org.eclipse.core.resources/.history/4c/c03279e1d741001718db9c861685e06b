@@ -1,0 +1,13 @@
+package com.bringmyweb.exceptionalframwork.core;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+public class Bar implements ExceptionHandler {
+	private static final Logger LOGGER = LogManager.getLogger();
+	@Override
+	public void handleException(Throwable t) {
+		System.out.println("Ta Ta");
+		System.out.println(t.getMessage());
+	}
+}

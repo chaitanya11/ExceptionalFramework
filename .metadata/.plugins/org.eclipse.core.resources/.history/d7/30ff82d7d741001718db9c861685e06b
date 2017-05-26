@@ -1,0 +1,9 @@
+package com.bringmyweb.exceptionalframwork.core;
+
+public class Bar implements ExceptionHandler {
+	@Override
+	public void handleException(Throwable t) {
+		System.out.println("Ta Ta");
+		System.out.println(t.getMessage());
+	}
+}

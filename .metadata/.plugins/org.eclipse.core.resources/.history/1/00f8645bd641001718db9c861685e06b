@@ -1,0 +1,5 @@
+package com.bringmyweb.exceptionalframwork.annotations;
+
+public @interface Catch {
+
+}

@@ -1,0 +1,19 @@
+package com.bringmyweb.exceptionalframwork.core;
+
+import com.bringmyweb.exceptionalframwork.annotations.CatchGroup;
+import com.bringmyweb.exceptionalframwork.annotations.Catch;
+
+class Foo implements Caller {
+	@Override
+	@CatchGroup(catchers = { @Catch(targetException = ArithmeticException.class),
+			@Catch(targetException = NullPointerException.class) })
+	public void callMethod() throws Throwable {
+		int a = 0, b = 10;
+		System.out.println(b / a);
+	}
+
+	public static void main(String[] args) throws Exception {
+		Foo foo = new Foo();
+		MethodCaller.callMethod(foo);
+	}
+}
